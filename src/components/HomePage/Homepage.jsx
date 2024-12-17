@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import Hero from "../MainContent/Hero";
 
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,8 +107,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Remaining Content */}
-      {/* All other sections would be here as written. */}
+      <Hero />
     </div>
   );
 };
