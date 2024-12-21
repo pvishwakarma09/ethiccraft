@@ -16,9 +16,14 @@ import {
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import Hero from "../MainContent/Hero";
+import Hero from "../../MainContent/Hero";
+import Footer from "../../MainContent/Footer";
+import EducationProgramCard from "./EducationProgramCard";
+import Events from "./Events";
+import GetInvolved from "./GetInvolved";
+import GetInTouch from "../../MainContent/GetInTouch";
 
-const HomePage = () => {
+const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -108,8 +113,13 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Hero />
+      <Events />
+      <GetInvolved />
+      <EducationProgramCard />
+      <GetInTouch />
+      <Footer />
     </div>
   );
 };
 
-export default HomePage;
+export default Home;
