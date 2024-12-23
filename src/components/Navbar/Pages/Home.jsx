@@ -18,7 +18,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Hero from "../../MainContent/Hero";
 import Footer from "../../MainContent/Footer";
-import EducationProgramCard from "./EducationProgramCard";
+import Education from "./Education";
 import Events from "./Events";
 import GetInvolved from "./GetInvolved";
 import GetInTouch from "../../MainContent/GetInTouch";
@@ -115,7 +115,7 @@ const Home = () => {
       <Hero />
       <Events />
       <GetInvolved />
-      <EducationProgramCard />
+      <Education />
       <GetInTouch />
       <Footer />
     </div>

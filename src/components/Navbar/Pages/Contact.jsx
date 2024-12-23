@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -22,80 +23,85 @@ function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-    >
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
-        <form
-          onSubmit={handleSubmit}
-          className="max-w-2xl mx-auto bg-white rounded-lg p-8 shadow-lg text-black"
+    <>
+      <motion.div className="flex items-center justify-center min-h-screen">
+        <motion.form
+          className="space-y-6 p-6 border-2 border-gray-300 rounded-lg shadow-lg w-full max-w-3xl"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         >
-          <div className="mb-6">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full border-gray-300 rounded-lg shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Name<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Surname
+              </label>
+              <input
+                type="text"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                placeholder="Last Name"
+              />
+            </div>
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Email
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Email<span className="text-red-500">*</span>
             </label>
             <input
               type="email"
-              name="email"
-              id="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              placeholder="Email"
               required
-              className="w-full border-gray-300 rounded-lg shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Contact<span className="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              placeholder="Contact"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
               Message
             </label>
             <textarea
-              name="message"
-              id="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full border-gray-300 rounded-lg shadow-sm p-3 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              rows="3"
+              placeholder="Your message here"
             ></textarea>
           </div>
-          <div className="text-center">
-            <button
-              type="submit"
-              className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
+
+          <motion.button
+            type="submit"
+            className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 transition-all ease-in-out duration-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Submit
+          </motion.button>
+        </motion.form>
+      </motion.div>
+    </>
   );
 }
 

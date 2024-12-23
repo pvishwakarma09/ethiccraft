@@ -134,11 +134,18 @@ function Footer() {
 
       {/* Back to Top Button */}
       <a
-      href="#top"
-      className="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-pink-700 text-white p-4 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-pink-400 hover:to-pink-600 transition duration-300 transform hover:scale-110"
-    >
-      <i className="fas fa-arrow-up text-3xl text-white"></i>
-    </a>
+        href="#top"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-pink-700 text-black p-4 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-pink-400 hover:to-pink-600 transition duration-300 transform hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="black"
+        >
+          <path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path>
+        </svg>
+        Top
+      </a>
     </footer>
   );
 }
