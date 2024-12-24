@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import slider5 from "../../assets/slider5.png";
 import slider4 from "../../assets/slider4.jpg";
 import slider3 from "../../assets/slider3.jpg";
-import slider2 from "../../assets/silder2.jpg";
+import slider2 from "../../assets/slider2.jpg";
 import slider1 from "../../assets/slider1.jpg";
 
 function Hero() {

@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Footer() {
+  const [showTopButton, setShowTopButton] = useState(false);
+
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowTopButton(true);
+      } else {
+        setShowTopButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 sm:px-8">
       <div className="max-w-screen-xl mx-auto text-center sm:text-left flex flex-col sm:flex-row justify-between items-center space-y-8 sm:space-y-0">
@@ -108,17 +127,17 @@ function Footer() {
           {/* Partners and Sponsors */}
           <div className="flex space-x-6">
             <img
-              src="https://via.placeholder.com/100"
+              src="src/assets/slider2.jpg"
               alt="Sponsor"
               className="w-20 h-20 object-contain hover:scale-110 transition duration-300 ease-in-out"
             />
             <img
-              src="https://via.placeholder.com/100"
+              src="src/assets/slider3.jpg"
               alt="Sponsor"
               className="w-20 h-20 object-contain hover:scale-110 transition duration-300 ease-in-out"
             />
             <img
-              src="https://via.placeholder.com/100"
+              src="src/assets/slider1.jpg"
               alt="Sponsor"
               className="w-20 h-20 object-contain hover:scale-110 transition duration-300 ease-in-out"
             />
@@ -133,19 +152,21 @@ function Footer() {
       </div>
 
       {/* Back to Top Button */}
-      <a
-        href="#top"
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-pink-700 text-black p-4 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-pink-400 hover:to-pink-600 transition duration-300 transform hover:scale-110"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="black"
+      {showTopButton && (
+        <a
+          href="#top"
+          className="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-pink-700 text-black p-4 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-pink-400 hover:to-pink-600 transition duration-300 transform hover:scale-110"
         >
-          <path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path>
-        </svg>
-        Top
-      </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+          >
+            <path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path>
+          </svg>
+          Top
+        </a>
+      )}
     </footer>
   );
 }
