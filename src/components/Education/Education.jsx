@@ -41,7 +41,7 @@ const programs = [
 
 const Education = () => {
   return (
-    <div className="flex justify-center items-center p-20 bg-gray-100">
+    <div className="flex justify-center items-center p-5 bg-gray-100">
       <div className="max-w-3xl">
         <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">
           Our Programs

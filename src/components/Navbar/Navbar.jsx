@@ -126,10 +126,10 @@ const Navbar = () => {
               About Us
             </Link>
             <Link
-              to="/contact"
+              to="/education"
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
-              Contact Us
+              Education
             </Link>
             <Link
               to="/events"

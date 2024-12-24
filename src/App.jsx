@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar"; // Import your Navbar component
-import Home from "./components/Navbar/Pages/Home";
-import About from "./components/Navbar/Pages/About";
-import Contact from "./components/Navbar/Pages/Contact";
-import Events from "./components/Navbar/Pages/Events";
-import GetInvolved from "./components/Navbar/Pages/GetInvolved";
-import Education from "./components/Navbar/Pages/Education";
-import Registration from "./components/Navbar/Pages/Resistration";
-import Donate from "./components/Navbar/Pages/Donate";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Events from "./components/Events/Events";
+import GetInvolved from "./components/GetInvolved/GetInvolved";
+import Education from "./components/Education/Education";
+import Registration from "./components/Resistration/Resistration";
+import Donate from "./components/Donate/Donate";
 
 const App = () => {
   return (

@@ -3,13 +3,13 @@ import React from "react";
 const GetInvolved = () => {
   return (
     <>
-      <section class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+      <section class="py-5 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
         <div class="container mx-auto px-4">
           {/* <!-- Header Section --> */}
           <div class="text-center mb-16">
-          <h2 className="text-3xl font-bold text-center text-white mb-4">
-          Our <span className="text-black">Impact</span>
-        </h2>
+            <h2 className="text-3xl font-bold text-center text-white mb-4">
+              Our <span className="text-black">Impact</span>
+            </h2>
             <p class="max-w-2xl mx-auto">
               Together, we're making a difference in communities across the
               globe.

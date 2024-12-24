@@ -1,34 +1,64 @@
 import React from "react";
-import reactSvg from "../../assets/image3.jpg";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import slider5 from "../../assets/slider5.png";
+import slider4 from "../../assets/slider4.jpg";
+import slider3 from "../../assets/slider3.jpg";
+import slider2 from "../../assets/silder2.jpg";
+import slider1 from "../../assets/slider1.jpg";
 
 function Hero() {
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-purple-600/80 z-10"></div>
-        <img
-          src={reactSvg}
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Marching Towards Values
-          </h1>
-          <p className="text-xl md:text-2xl mb-8">
-            Transform your potential into impact through our specialized
-            programs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-              Explore Programs
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">
-              Watch Video
-            </button>
+      <section className="w-full">
+        <Carousel
+          className="h-full"
+          showThumbs={false}
+          autoPlay
+          infiniteLoop
+          interval={3000}
+          showStatus={false}
+        >
+          <div>
+            <img
+              src={slider5}
+              alt="Slide 5"
+              className="h-screen w-full object-cover lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
+            />
           </div>
-        </div>
+          <div>
+            <img
+              src={slider4}
+              alt="Slide 4"
+              className="h-screen w-full object-cover lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
+            />
+          </div>
+          <div>
+            <img
+              src={slider3}
+              alt="Slide 3"
+              className="h-screen w-full object-cover lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
+            />
+          </div>
+          <div>
+            <img
+              src={slider2}
+              alt="Slide 2"
+              className="h-screen w-full object-cover lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
+            />
+          </div>
+          {/* <div>
+            <img
+              src={slider1}
+              alt="Slide 1"
+              className="h-screen w-full object-cover lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
+            />
+          </div> */}
+        </Carousel>
       </section>
+
+      <br />
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">

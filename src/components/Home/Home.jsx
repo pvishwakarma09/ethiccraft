@@ -16,12 +16,12 @@ import {
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import Hero from "../../MainContent/Hero";
-import Footer from "../../MainContent/Footer";
-import Education from "./Education";
-import Events from "./Events";
-import GetInvolved from "./GetInvolved";
-import GetInTouch from "../../MainContent/GetInTouch";
+import Hero from "../Hero/Hero";
+import Footer from "../Footer/Footer";
+import Education from "../Education/Education";
+import Events from "../Events/Events";
+import GetInvolved from "../GetInvolved/GetInvolved";
+import GetInTouch from "../GetInTouch/GetInTouch";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

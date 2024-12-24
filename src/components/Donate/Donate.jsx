@@ -19,7 +19,7 @@ const Donate = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-2">
       <motion.div
         className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg"
         initial={{ opacity: 0, scale: 0.9 }}
