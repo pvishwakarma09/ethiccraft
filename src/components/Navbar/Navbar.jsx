@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-black to-black">
-            Ethicraft
+            Ethiccraft
           </span>
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
