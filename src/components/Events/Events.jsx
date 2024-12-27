@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const events = [
   {
@@ -63,9 +64,11 @@ const Events = () => {
                 </h3>
                 <p className="text-gray-600 text-sm">{event.description}</p>
                 <div className="mt-4 flex justify-end">
-                  <button className="px-4 py-2 text-sm bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
-                    Register Now
-                  </button>
+                  <NavLink to="/resisternow" end>
+                    <button className="px-4 py-2 text-sm bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
+                      Register Now
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             </div>

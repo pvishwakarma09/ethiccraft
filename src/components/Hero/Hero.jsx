@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import { NavLink } from "react-router";
 import slider4 from "../../assets/slider4.jpg";
 import slider5 from "../../assets/slider5.png";
 import slider3 from "../../assets/slider3.jpg";
@@ -10,42 +10,41 @@ import slider2 from "../../assets/slider2.jpg";
 function Hero() {
   return (
     <>
-      {/* Hero Carousel Section */}
       <section className="w-full">
         <Carousel
           className="h-full"
           showThumbs={false}
           autoPlay
           infiniteLoop
-          interval={3000}
+          interval={2000}
           showStatus={false}
         >
           <div>
             <img
               src={slider4}
               alt="Slide 5"
-              className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] object-cover"
+              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
           <div>
             <img
               src={slider5}
               alt="Slide 4"
-              className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] object-cover"
+              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
           <div>
             <img
               src={slider3}
               alt="Slide 3"
-              className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] object-cover"
+              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
           <div>
             <img
               src={slider2}
               alt="Slide 2"
-              className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] object-cover"
+              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
         </Carousel>
@@ -72,9 +71,12 @@ function Hero() {
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Education
-              </h3>
+
+              <NavLink to="/education" end>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                  Education
+                </h3>
+              </NavLink>
               <p className="text-gray-700">
                 Empowering minds through knowledge and wisdom
               </p>
@@ -96,7 +98,11 @@ function Hero() {
                 <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Support</h3>
+              <NavLink to="/education" end>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                  Support
+                </h3>
+              </NavLink>
               <p className="text-gray-700">
                 Building strong communities through collaboration
               </p>
@@ -123,9 +129,11 @@ function Hero() {
                 <path d="m6.34 17.66-1.41 1.41"></path>
                 <path d="m19.07 4.93-1.41 1.41"></path>
               </svg>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Ambience
-              </h3>
+              <NavLink to="/getinvolved" end>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                  Ambiance
+                </h3>
+              </NavLink>
               <p className="text-gray-700">
                 Creating inspiring environments for growth
               </p>

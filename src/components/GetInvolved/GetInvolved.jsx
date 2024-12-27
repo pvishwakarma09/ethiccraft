@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const GetInvolved = () => {
   return (
@@ -120,9 +121,12 @@ const GetInvolved = () => {
               />
             </div>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-              <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
-                Become a Member
-              </button>
+              <NavLink to="/resisternow" end>
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
+                  Become a Member
+                </button>
+              </NavLink>
+
               <button class="bg-purple-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-600 transition">
                 Volunteer with Us
               </button>
