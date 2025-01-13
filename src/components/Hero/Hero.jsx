@@ -23,28 +23,28 @@ function Hero() {
             <img
               src={slider4}
               alt="Slide 5"
-              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
+              className="w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
           <div>
             <img
               src={slider5}
               alt="Slide 4"
-              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
+              className="w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
           <div>
             <img
               src={slider3}
               alt="Slide 3"
-              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
+              className="w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
           <div>
             <img
               src={slider2}
               alt="Slide 2"
-              className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
+              className="w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
         </Carousel>
