@@ -10,7 +10,7 @@ import slider2 from "../../assets/slider2.jpg";
 function Hero() {
   return (
     <>
-      <section className="w-full">
+      {/* <section className="w-full">
         <Carousel
           className="h-full"
           showThumbs={false}
@@ -47,8 +47,8 @@ function Hero() {
               className="w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] object-cover lg:object-contain"
             />
           </div>
-        </Carousel>
-      </section>
+        </Carousel> */}
+      {/* </section> */}
 
       {/* Focus Areas Section */}
       <section className="py-12 bg-gray-50">
